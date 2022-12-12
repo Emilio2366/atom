@@ -25,7 +25,7 @@
       StartupTime.addMarker('window:onload:start');
       const startTime = Date.now();
 
-      process.on('unhandledRejection', function(error, promise) {
+      process.off('unhandledRejection', function(error, promise) {
         console.error(
           'Unhandled promise rejection %o with error: %o',
           promise,
